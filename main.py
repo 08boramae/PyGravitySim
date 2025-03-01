@@ -25,7 +25,7 @@ print(f"Initial height: {ground_level-initial_height} (from ground)")
 
 # Gravity simulation parameters
 simulation_time = 0
-time_step = 0.05  # seconds per step(0.1이 적당)
+time_step = 0.1  # seconds per step(0.1이 적당)
 
 while True:
     simulation_time += time_step

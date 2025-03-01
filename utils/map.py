@@ -11,7 +11,6 @@ for i in range(MAP_WIDTH):
     current_map[i + GROUND_LEVEL * MAP_WIDTH] = "="
 
 def print_map():
-    """Print the current map state with borders"""
     for y in range(MAP_HEIGHT):
         print("|", end="")
         for x in range(MAP_WIDTH):
@@ -20,7 +19,6 @@ def print_map():
     print("+" + "-" * MAP_WIDTH + "+")
 
 def clear_map():
-    """Clear any objects from the map but keep the ground"""
     for y in range(MAP_HEIGHT):
         for x in range(MAP_WIDTH):
             if y != GROUND_LEVEL:  # Don't clear the ground
@@ -29,9 +27,7 @@ def clear_map():
                 current_map[x + y * MAP_WIDTH] = "="
 
 def get_ground_level():
-    """Return the y-coordinate of the ground level"""
     return GROUND_LEVEL
 
 def is_valid_position(x, y):
-    """Check if a position is valid within map boundaries"""
     return 0 <= x < MAP_WIDTH and 0 <= y < MAP_HEIGHT
